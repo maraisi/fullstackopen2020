@@ -1,0 +1,23 @@
+title 0.6: new note spa
+
+note over browser:
+user writes something into the text
+field and click the submit button
+end note
+
+note over browser:
+the spa.js instructs the browser to fetch the form-element
+from the page and to register an event handler
+end note
+
+note over browser:
+the event handler prevent the default handling of form submit,
+creates a new note, adds it to the notes list, rerenders the 
+note list on the page and sends the new note to the server.
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa    [Content-Type: application/json]
+
+note over server:
+the server parse the data as JSON format
+end note
